@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  api-a:
+    image: 'api-a'
+    build:
+      context: ./srv
+      args:
+        SRV_NAME: api-a
+    hostname: api-a

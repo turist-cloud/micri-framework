@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["esnext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "removeComments": true,
+    "strict": true,
+    "target": "ES2018",
+    "inlineSourceMap": true,
+    "types": ["jest","node"],
+    "typeRoots": [
+      "./lib/types",
+      "./node_modules/@types"
+    ]
+  }
+}

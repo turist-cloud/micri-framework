@@ -1,0 +1,46 @@
+{
+  "name": "micri-framework",
+  "private": true,
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "prettier": "find . -path './**/*.ts' -not -path '*/node_modules/*'  -not -path '*/dist/*' -exec sh -c 'for n; do tsfmt -r \"$n\" || exit 1; done' sh {} +",
+    "git-pre-commit": "find . -path './**/*.ts' -not -path '*/node_modules/*' -not -path '*/dist/*' -exec sh -c 'for n; do tsfmt --verify \"$n\" || exit 1; done' sh {} +"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "dependencies": {
+    "@hapi/accept": "4.0.0",
+    "async-sema": "3.0.1",
+    "lru-cache": "5.1.1",
+    "micri": "2.0.1",
+    "ms": "2.1.2",
+    "my-way": "2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.18",
+    "@types/lru-cache": "5.1.0",
+    "@types/ms": "0.7.31",
+    "@types/node": "12.7.11",
+    "@zeit/git-hooks": "0.1.4",
+    "@zeit/ncc": "0.20.5",
+    "jest": "24.9.0",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.2",
+    "typescript-formatter": "7.2.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testMatch": [
+      "**/test/**/*.test.ts"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/*.ts"
+    ],
+    "verbose": true
+  },
+  "git": {
+    "pre-commit": "lint-staged"
+  }
+}
