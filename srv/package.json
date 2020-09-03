@@ -10,7 +10,7 @@
     "node": ">= 8.0.0"
   },
   "dependencies": {
-    "@hapi/accept": "4.0.0",
+    "@hapi/accept": "5.0.1",
     "async-sema": "3.0.1",
     "lru-cache": "5.1.1",
     "micri": "2.0.1",
